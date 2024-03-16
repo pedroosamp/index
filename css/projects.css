@@ -1,0 +1,325 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+
+title {
+    display: none;
+}
+
+/* Variáveis */
+:root {
+    --fundo-main: rgb(34, 34, 34);
+    --cor-letra: antiquewhite;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+/* ALL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+*::selection {
+    background-color: #363636;
+}
+
+
+/* Header */
+.headerlogo ul {
+    padding: 15px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.headerlogo li {
+    display: flex;
+    align-items: center;
+}
+.headerlogo div {
+    gap: 100px;
+    display: flex;
+}
+.headerlogo #logo {
+    width: 70px;
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+}
+.link::after {
+    content: ''; /* conteúdo adicional depois do link */
+    display: block; /* torna o conteúdo um bloco para que possa ser estilizado */
+    width: 0; /* largura inicial da barra */
+    height: 2px; /* altura da barra */
+    background-color: white; /* cor da barra */
+    position: absolute; /* define a posição da barra como absoluta */
+    bottom: -5px; /* posição inicial da barra */
+    left: 0; /* posição inicial da barra */
+    transition: width 0.3s; /* animação de transição para a largura da barra */
+}
+.link:hover::after {
+    width: 100%; /* largura da barra quando o mouse passar por cima do link */
+}
+
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.911);
+}
+
+/* Home */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(34, 34, 34);
+    padding: 30px;
+    border-radius: 9px;
+    color: antiquewhite;
+    width: 100%;
+    margin-top: 15px;
+}
+.home p {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+/* Projetos */
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fundo-main);
+    border-radius: 9px;
+    padding: 30px;
+    gap: 20px;
+    justify-content: start;
+
+}
+.projects h2{
+    position: absolute;
+    margin-bottom: 235px;
+}
+.projects section {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #313131;
+    padding: 15px;
+    border-radius: 20px;
+    color: antiquewhite;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.projects div {
+    display: flex;
+    justify-content: start;
+}
+.grupo1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grupo1 h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.projects div img {
+    width: 150px;
+    height: auto;
+    border: 5px;
+    border-style: solid;
+    border-color: #313131;
+    border-radius: 20px;
+}
+.projects p {
+    font-size: 18px;
+}
+
+footer {
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+/* Outros */
+.text-white {
+    display: flex;
+    flex-direction: column;
+    color: antiquewhite;
+    text-align: center;
+}
+#h2 {
+    color: antiquewhite;
+}
+#sombra {
+    border-radius: 15px;
+}
+
+/* Gambiarra */
+.content {
+    display: flex;
+    margin-bottom: 50px;
+    
+} 
+.content h2 {
+    color: #fff;
+    font-size: 7em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px antiquewhite;
+}
+.content h2:nth-child(2) {
+    color: antiquewhite;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+    0%,
+    100% {
+    clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+    );
+    }
+
+    50% {
+    clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+    );
+    }
+}
+
+
+@media (max-width: 987px) {
+    .content {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 793px) {
+    .content {
+        font-size: 12px;
+    }
+    .projects div img {
+        width: 120px;
+    }
+    .sobre img {
+        width: 120px;
+    }
+    .sobre {
+        width: 100%;
+    }
+    .sobre p {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 670px) {
+    .content {
+        font-size: 10px;
+    }
+    body {
+        max-width: 500px;
+    }
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects div img {
+        width: 150px;
+    }
+    .social ul {
+        gap: 40px;
+    }
+    .sobre {
+        display: flex;
+        flex-direction: column;
+    }
+    .sobre img {
+        width: 99%;
+        margin: 20px;
+        margin-top: 8px;
+    }
+    .projects h2 {
+        margin-bottom: 730px;
+    }
+    .headerlogo div {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 525px) {
+    body {
+        max-width: 400px;
+    }
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects div img {
+        width: 150px;
+    }
+    .social ul {
+        gap: 5px;
+    }
+    .projects h2 {
+        margin-bottom: 730px;
+    }
+    .projects p {
+        font-size: 15px;
+    }
+    #phbs {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 470px) {
+    .projects p {
+        font-size: 13px;
+    }
+    #phbs {
+        font-size: 50px;
+    }
+    body {
+        max-width: 350px;
+    }
+    .headerlogo {
+        font-size: 13px;
+    }
+}

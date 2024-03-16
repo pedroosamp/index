@@ -1,0 +1,81 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+
+title {
+    display: none;
+}
+
+/* Variáveis */
+:root {
+    --fundo-main: rgb(34, 34, 34);
+    --cor-letra: antiquewhite;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+/* ALL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+*::selection {
+    background-color: #363636;
+}
+
+
+/* Header */
+.headerlogo ul {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.headerlogo li {
+    display: flex;
+    align-items: center;
+}
+.headerlogo div {
+    gap: 100px;
+}
+.headerlogo #logo {
+    width: 70px;
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+}
+.link::after {
+    content: ''; /* conteúdo adicional depois do link */
+    display: block; /* torna o conteúdo um bloco para que possa ser estilizado */
+    width: 0; /* largura inicial da barra */
+    height: 2px; /* altura da barra */
+    background-color: white; /* cor da barra */
+    position: absolute; /* define a posição da barra como absoluta */
+    bottom: -5px; /* posição inicial da barra */
+    left: 0; /* posição inicial da barra */
+    transition: width 0.3s; /* animação de transição para a largura da barra */
+}
+.link:hover::after {
+    width: 100%; /* largura da barra quando o mouse passar por cima do link */
+}
+
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    background-color: rgba(0, 0, 0, 0.911);
+
+    color: aliceblue;
+}
