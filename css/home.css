@@ -75,6 +75,7 @@ body {
     flex-direction: column;
     max-width: 80vw;
     background-color: rgba(0, 0, 0, 0.911);
+    width: 80vw;
 }
 
 /* Home */
