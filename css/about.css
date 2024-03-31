@@ -171,6 +171,45 @@ footer {
     border-radius: 15px;
 }
 
+/* Social */
+.social {
+    background-color: var(--fundo-main);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    width: 100%;
+}
+.social ul {
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+    list-style: none;
+    gap: 80px;
+}
+
+/* Social Imgs */
+.twitch-img {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+}
+.instagram-img {
+    width: 35px;
+    height: 35px;
+    margin: 8px;
+}
+.github-img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+.twitter-img {
+    width: 55px;
+    height: 55px;
+}
+
 /* Gambiarra */
 .content {
     display: flex;
