@@ -202,7 +202,10 @@ body {
 }
 
 footer {
+    display: flex;
     margin: 40px;
+    justify-content: center;
+    align-items: center;
     color: aliceblue;
 }
 
