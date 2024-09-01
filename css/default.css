@@ -27,6 +27,18 @@ html {
     background-color: #363636;
 }
 
+.specs {
+    margin-top: 10px;
+    margin-left: 20px;
+    list-style: none;
+}
+
+.game-about {
+    text-align: center;
+    max-width: 800px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 
 /* Header */
 .headerlogo ul {
@@ -322,4 +334,43 @@ footer {
     .headerlogo {
         font-size: 13px;
     }
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 20px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
 }
